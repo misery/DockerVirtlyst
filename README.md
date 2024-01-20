@@ -1,5 +1,4 @@
-.. image:: https://img.shields.io/docker/pulls/aklitzing/virtlyst.svg
-   :target: https://hub.docker.com/r/aklitzing/virtlyst/
+[![Docker Pulls](https://img.shields.io/docker/pulls/aklitzing/virtlyst.svg)](https://hub.docker.com/r/aklitzing/virtlyst)
 
 
 Virtlyst in Docker
