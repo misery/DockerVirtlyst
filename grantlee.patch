@@ -1,0 +1,13 @@
+diff --git a/src/virtlyst.cpp b/src/virtlyst.cpp
+index be5d72c..367e4af 100644
+--- a/src/virtlyst.cpp
++++ b/src/virtlyst.cpp
+@@ -108,7 +108,7 @@ bool Virtlyst::init()
+     auto templatePath = config(QStringLiteral("TemplatePath"), pathTo(QStringLiteral("root/src"))).toString();
+     auto view = new CuteleeView(this);
+     view->setCache(production);
+-    view->engine()->addDefaultLibrary(QStringLiteral("grantlee_i18ntags"));
++    view->engine()->addDefaultLibrary(QStringLiteral("cutelee_i18ntags"));
+     view->addTranslator(QLocale::system(), new QTranslator(this));
+     view->setIncludePaths({ templatePath });
+ 
