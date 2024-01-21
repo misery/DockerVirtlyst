@@ -5,7 +5,7 @@ WORKDIR /root
 
 ARG CUTELEE_VERSION=6.1.0
 ARG CUTELYST_VERSION=4.0.0
-ARG VIRTYLST_VERSION=2f0f67509a656b37bf8bb7601d14d006d3d12c1a
+ARG VIRTYLST_VERSION=086d3be5b3c59b9afcf8ce9297ae55082454323f
 
 RUN apk upgrade -a -U && apk add g++ patch cmake samurai libvirt-dev qt6-qtbase-dev qt6-qtdeclarative-dev qt6-qttools-dev
 
@@ -23,10 +23,9 @@ RUN mkdir src && cd src && \
     cmake --build build && cmake --install build && \
     rm -rf /root/src /root/build
 
-COPY grantlee.patch /root/
 RUN mkdir src && cd src && \
     wget -O virtylst.tar.gz https://github.com/cutelyst/Virtlyst/archive/$VIRTYLST_VERSION.tar.gz && \
-    tar xf virtylst.tar.gz --strip-components 1 && patch -p1 -i /root/grantlee.patch && \
+    tar xf virtylst.tar.gz --strip-components 1 && \
     cmake -GNinja -B build -DCMAKE_INSTALL_PREFIX=/usr/local . && \
     cmake --build build
 
