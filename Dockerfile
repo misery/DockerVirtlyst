@@ -5,7 +5,7 @@ WORKDIR /root
 
 ARG CUTELEE_VERSION=6.1.0
 ARG CUTELYST_VERSION=4.0.0
-ARG VIRTYLST_VERSION=086d3be5b3c59b9afcf8ce9297ae55082454323f
+ARG VIRTYLST_VERSION=6cb43c053879dc4f11f717d7c1a7008f15230f80
 
 RUN apk upgrade -a -U && apk add g++ patch cmake samurai libvirt-dev qt6-qtbase-dev qt6-qtdeclarative-dev qt6-qttools-dev
 
