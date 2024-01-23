@@ -33,7 +33,7 @@ FROM alpine:$ALPINE_VERSION
 
 RUN set -ex && \
 	apk upgrade -a -U && \
-	apk add openssh libvirt qt6-qtbase qt6-qtdeclarative qt6-qtbase-sqlite && \
+	apk add openssh libvirt qt6-qtbase qt6-qtdeclarative qt6-qtbase-sqlite vim && \
 	rm -rf /var/cache/apk
 
 COPY --from=build /usr/local /usr/local
